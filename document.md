@@ -1,31 +1,40 @@
-Questions for Journal Editors on LLM Copyediting Software
-=========================================================
+---
+title: Questions for Journal Editors on LLM Copyediting Software
+date: 2024-03-24
+abstract: |
+  **STAGE**: Draft
 
-Motivation
+  **DOCUMENT TYPE**: Discussion Document
+
+  LLM copyediting software can implement features that help authors be more transparent to
+  journals as to how they have used an LLM in the writing of a manuscript.
+  The development and documentation of these features can achieve higher utility if guided
+  by the questions posed for journals editors in this discussion document.
+---
+
+Background
 ----------
 
-LLM copyediting software can implement features that help authors be more transparent to
-journals as to how they have used an LLM in the writing of a manuscript.
-The development and documentation of these features can achieve higher utility if guided
-by the following questions for journals editors.
-These questions are about three types of disclosure enabled by a particular
+The questions in this discussion document are about three types of disclosure enabled by a particular
 manuscript writing approach. This approach consists of writing a manuscript
 
 * with source text files, such as LaTeX or Markdown,
-* saving them with source version control, such as Git [], and
-* improving the text with LLM copyediting software, such as Manubot AI Editor [1][2], and spin-off CopyAid [3].
+* saving them with source version control, such as [Git](https://en.wikipedia.org/wiki/Git), and
+* improving the text with LLM copyediting software,
+  such as Manubot AI Editor [@Pividori2023.01.21.525030],
+  and spin-off <https://CopyAid.it>.
 
-LLM copyediting sofotware takes chunks of text from an existing manuscript
+LLM copyediting software takes chunks of text from an existing manuscript
 together with canned instructions such as "Revise the text received" and sends them
 together to an LLM so that the response become a new revised alternative chunk of text
 for the manuscript.
 
 
 First Type Of Disclosure
-----------------------------
+------------------------
 
-This first type of disclosure corresponds to what the GSA journals currently
-request of authors:
+This first type of disclosure corresponds to
+[what the GSA journals currently request of authors](https://academic.oup.com/genetics/pages/general-instructions):
 "full technical specifications of the LLM used (name, version, model, source) and method
 of application (query structure, syntax)" [4].
 
@@ -43,7 +52,7 @@ https://gitlab.com/castedo/copyaid/-/raw/68647e9c9439159259e6a282ccd0de5c15aea94
 
 
 Second Type Of Disclosure
------------------------------
+-------------------------
 
 The second type of disclosure is the full history of all edits done by the human authors. These edits
 are saved as "commits" in Git terminology. An example is the history of hundreds of
@@ -65,7 +74,7 @@ https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://gi
 
 
 Third Type Of Disclosure
-----------------------------
+------------------------
 
 The third type of disclosure is similar to the second type, but for LLM suggested edits,
 not changes saved by a human. 
@@ -81,8 +90,8 @@ Like with human edits recorded as Git commits, LLL-generated edits can also be r
 as Git commits.
 
 
-Main Question
--------------
+Main Questions
+--------------
 
 Given that the GSA already requests the information in a "method specification file", we
 assume journal editors would like LLM copyediting software to facilitate authors
@@ -112,25 +121,18 @@ Q3) How much utility do journal editors find in also having the third type of
 disclosure, given the first and second types of disclosures are already available?
 
 
-
 Terminology Questions
 ---------------------
 
-Q2) The GSA journals use the term "language editing" as a suggested pre-submission
+Q4) The GSA journals use the term "language editing" as a suggested pre-submission
 activity. Do you think "LLM language editing" is a better description rather than "LLM
 copyediting" for the function performed by the software referenced by these questions?
 
-Q3) Is there an alternative term than "method specification file" that you think
+Q5) Is there an alternative term than "method specification file" that you think
 is a more understandable name for the file described in the first type of disclosure?
 
-Q4) Are the any names you can suggest for a file that 
+Q6) Are the any names you can suggest for a file that 
 ists and links to the edits of the SECOND type of disclosure (saved edits by a human)?
 
-Q5) Are the any names you can suggest for a file that lists and links to the THIRD type
+Q7) Are the any names you can suggest for a file that lists and links to the THIRD type
 of disclosure (suggested edits by an LLM copyediting software)?
-
-
-
-[] https://en.wikipedia.org/wiki/Git
-
-[] https://academic.oup.com/genetics/pages/general-instructions
