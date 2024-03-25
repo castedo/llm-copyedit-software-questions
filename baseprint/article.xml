@@ -43,24 +43,25 @@
 <abstract>
 <p><bold>STAGE</bold>: Draft</p>
 <p><bold>DOCUMENT TYPE</bold>: Discussion Document</p>
-<p>LLM copyediting software can implement features that help authors be more transparent to
-journals as to how they have used an LLM in the writing of a manuscript.
-The development and documentation of these features can achieve higher utility if guided
-by the questions posed for journals editors in this discussion document.</p>
+<p>LLM copyediting software can incorporate features that assist authors
+in being more transparent with
+journals regarding their use of an LLM in manuscript preparation.
+The development and documentation of these features can be more beneficial if guided
+by the questions posed to journal editors in this discussion document.</p>
 </abstract>
 </article-meta>
 </front>
 <body>
 <sec id="background">
   <title>Background</title>
-  <p>The questions in this discussion document are about three types of disclosure enabled by a particular
-  manuscript writing approach. This approach consists of writing a manuscript</p>
+  <p>The questions in this discussion document pertain to three types of disclosure facilitated by a specific
+  manuscript writing approach. This approach involves writing a manuscript</p>
   <list list-type="bullet">
     <list-item>
       <p>with source text files, such as LaTeX or Markdown,</p>
     </list-item>
     <list-item>
-      <p>saving them with source version control, such as <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/wiki/Git">Git</ext-link>, and</p>
+      <p>saving them using source version control, such as <ext-link ext-link-type="uri" xlink:href="https://en.wikipedia.org/wiki/Git">Git</ext-link>, and</p>
     </list-item>
     <list-item>
       <p>improving the text with LLM copyediting software,
@@ -68,45 +69,48 @@ by the questions posed for journals editors in this discussion document.</p>
       and spin-off <ext-link ext-link-type="uri" xlink:href="https://CopyAid.it">https://CopyAid.it</ext-link>.</p>
     </list-item>
   </list>
-  <p>LLM copyediting software takes chunks of text from an existing manuscript
-  together with canned instructions such as “Revise the text received” and sends them
-  together to an LLM so that the response become a new revised alternative chunk of text
-  for the manuscript.</p>
+  <p>LLM copyediting software processes chunks of text from an existing manuscript
+  along with predefined instructions like “Revise the text received” and submits them
+  to an LLM. The LLM’s response is then a new, revised chunk of text
+  suggested for the manuscript.</p>
 </sec>
 <sec id="first-type-of-disclosure">
-  <title>First Type Of Disclosure</title>
-  <p>This first type of disclosure corresponds to
-  <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/genetics/pages/general-instructions">what the GSA journals currently request of authors</ext-link>:
+  <title>First Type of Disclosure</title>
+  <p>The first type of disclosure aligns with
+  <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/genetics/pages/general-instructions">the current requirements from GSA journals for authors</ext-link>:
   “full technical specifications of the LLM used (name, version, model, source) and method
   of application (query structure, syntax)” [4].</p>
-  <p>CopyAid currently outputs files that we can name “method specification files”, using the
-  language of the GSA guideline.
-  Here is an example such a file output by CopyAid when an author chooses the “proofread”
+  <p>CopyAid produces files that could be termed “method specification files”, following the
+  language of the GSA requirement.
+  Here is an example of such a file produced by CopyAid when an author chooses the “proofread”
   instruction:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://gitlab.com/castedo/copyaid/-/raw/68647e9c9439159259e6a282ccd0de5c15aea944/copyaid/config/proofread.toml">proofread.toml</ext-link></p>
-  <p>Authors can choose other CopyAid instructions such as “heavy” which output a slightly
+  <p>Authors can choose other CopyAid instructions such as “heavy” which produces a slightly
   different “method specification file”:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://gitlab.com/castedo/copyaid/-/raw/68647e9c9439159259e6a282ccd0de5c15aea944/copyaid/config/heavy.toml">heavy.toml</ext-link></p>
 </sec>
 <sec id="second-type-of-disclosure">
-  <title>Second Type Of Disclosure</title>
-  <p>The second type of disclosure is the full history of all edits done by the human authors. These edits
-  are saved as “commits” in Git terminology. An example is the history of hundreds of
-  commits for publication doi:10.1098/rsif.2017.0387 <xref alt="2" rid="ref-doiU003A10.1098U002Frsif.2017.0387" ref-type="bibr">2</xref>:</p>
+  <title>Second Type of Disclosure</title>
+  <p>The second type of disclosure is the complete history of all edits made by the human authors,
+  saved as “commits” in Git terminology. An example is the history of hundreds of
+  commits for the publication doi:10.1098/rsif.2017.0387 <xref alt="2" rid="ref-doiU003A10.1098U002Frsif.2017.0387" ref-type="bibr">2</xref>:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://github.com/greenelab/deep-review/commits/master/">https://github.com/greenelab/deep-review/commits/master/</ext-link></p>
-  <p>An example individual commit (saved edit) is:</p>
+  <p>An example of an individual commit (saved edit) is:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://github.com/greenelab/deep-review/commit/081fb466dd13c2813b3ae14bb916173f5d0442c5?diff=split">https://github.com/greenelab/deep-review/commit/081fb466dd13c2813b3ae14bb916173f5d0442c5?diff=split</ext-link></p>
-  <p>The second type of disclosure provides transparency on saved edits that are clearly
-  crafted by humans and not mindlessly generated by an LLM.</p>
+  <p>This type of disclosure provides transparency on the history of what text revisions
+  a human choose to include in the manuscript.
+  These revisions are typically large chunks of draft text early in the history of a
+  manuscript and then later the revisions are smaller.</p>
   <p>These histories can be easily and automatically archived in the Software Heritage
-  Archive with archival time stamps outside the control of the authors:</p>
+  Archive with archival timestamps beyond the authors’ control:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://github.com/greenelab/deep-review">https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://github.com/greenelab/deep-review</ext-link></p>
 </sec>
 <sec id="third-type-of-disclosure">
-  <title>Third Type Of Disclosure</title>
-  <p>The third type of disclosure is similar to the second type, but for LLM suggested edits,
+  <title>Third Type of Disclosure</title>
+  <p>The third type of disclosure is similar to the second type but for LLM-suggested edits,
   not changes saved by a human.
-  This functionality is featured by Manubot AI Editor. Example edits can be seen in these four
+  This functionality is showcased by Manubot AI Editor.
+  Example edits are illustrated in these four
   diagrams from the paper about Manubot AI Editor:</p>
   <list list-type="bullet">
     <list-item>
@@ -122,7 +126,7 @@ by the questions posed for journals editors in this discussion document.</p>
       <p><ext-link ext-link-type="uri" xlink:href="https://greenelab.github.io/manubot-gpt-manuscript/#fig:methods:manubotai">https://greenelab.github.io/manubot-gpt-manuscript/#fig:methods:manubotai</ext-link></p>
     </list-item>
   </list>
-  <p>Like with human edits recorded as Git commits, LLL-generated edits can also be recorded
+  <p>Similar to human edits recorded as Git commits, LLM-suggested revisions can also be recorded
   as Git commits.</p>
 </sec>
 <sec id="main-questions">
