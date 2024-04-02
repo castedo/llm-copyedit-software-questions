@@ -11,7 +11,7 @@ abstract: |
   LLM copyediting software can incorporate features that assist authors
   in being more transparent with
   journals regarding their use of an LLM in manuscript preparation.
-  The development and documentation of these features can be more beneficial if guided
+  The development and documentation of these features can be improved if guided
   by the questions posed to journal editors in this discussion document.
 ---
 
@@ -27,7 +27,7 @@ manuscript writing approach. This approach involves writing a manuscript:
 * saving them using source version control, such as [Git](https://en.wikipedia.org/wiki/Git), and
 * improving the text with LLM copyediting software,
   such as Manubot AI Editor [@Pividori2023.01.21.525030],
-  and a spin-off <https://CopyAid.it>.
+  and spin-off software <https://CopyAid.it>.
 
 LLM copyediting software processes chunks of text from an existing manuscript
 along with predefined instructions like "Revise the text received" and submits them
@@ -43,7 +43,7 @@ First Type of Disclosure
 The first type of disclosure aligns with
 [the current requirements from GSA journals for authors](https://academic.oup.com/genetics/pages/general-instructions),
 which include "full technical specifications of the LLM used (name, version, model, source) and method
-of application (query structure, syntax)" [4].
+of application (query structure, syntax)".
 
 CopyAid produces files that could be termed "method specification files", following the
 language of the GSA requirement.
@@ -76,12 +76,15 @@ An example of an individual commit (saved edit) is:
 <https://github.com/greenelab/deep-review/commit/081fb466dd13c2813b3ae14bb916173f5d0442c5?diff=split>
 
 This type of disclosure provides transparency on the history of text revisions that
-an author chose to include in the manuscript.
+an author chose to insert into manuscript drafts.
+What an author chooses to insert into drafts
+might be a mixture of what the author has typed with their own hands
+mixed together with text they have copied from LLM-generated text.
 These revisions typically consist of large chunks of draft text early in
 the manuscript's history, with later revisions being smaller.
 
 These histories can be easily and automatically archived in the Software Heritage
-Archive, with archival timestamps beyond the authors' control:
+Archive, with archival timestamps beyond the authors' control, for example:
 
 <https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://github.com/greenelab/deep-review>
 
@@ -91,8 +94,8 @@ Archive, with archival timestamps beyond the authors' control:
 Third Type of Disclosure
 ------------------------
 
-The third type of disclosure is similar to the second type but pertains to LLM-suggested edits rather than
-changes saved by a human. 
+The third type of disclosure is similar to the second type but pertains specifically to
+LLM-suggested edits rather than changes saved by a human. 
 This functionality is showcased by Manubot AI Editor.
 Example edits are illustrated in
 the following four diagrams from the paper about Manubot AI Editor:
@@ -136,7 +139,7 @@ actual LLM-suggested edits on past drafts.
 Alternatively, editors might be more interested in just getting a general sense of what kinds of
 edits an LLM generates for a given method specification file.
 
-What would be more useful to journal editors, seeing
+What would be more useful to journal editors? Seeing
 
 * the actual LLM-suggested edits on past drafts (which an author might or might not have
   chosen to incorporate, and may have been re-edited or deleted by a human in the
@@ -150,7 +153,7 @@ or
 ### Question 2
 
 If for question 1 you prefer LLM-suggested edits on actual past drafts,
-what would be more useful:
+what would be more useful?
 
 * a short list (just edits on tens of selected paragraphs)
 

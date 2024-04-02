@@ -46,7 +46,7 @@
 <p>LLM copyediting software can incorporate features that assist authors
 in being more transparent with
 journals regarding their use of an LLM in manuscript preparation.
-The development and documentation of these features can be more beneficial if guided
+The development and documentation of these features can be improved if guided
 by the questions posed to journal editors in this discussion document.</p>
 </abstract>
 </article-meta>
@@ -66,7 +66,7 @@ by the questions posed to journal editors in this discussion document.</p>
     <list-item>
       <p>improving the text with LLM copyediting software,
       such as Manubot AI Editor <xref alt="1" rid="ref-Pividori2023.01.21.525030" ref-type="bibr">1</xref>,
-      and a spin-off <ext-link ext-link-type="uri" xlink:href="https://CopyAid.it">https://CopyAid.it</ext-link>.</p>
+      and spin-off software <ext-link ext-link-type="uri" xlink:href="https://CopyAid.it">https://CopyAid.it</ext-link>.</p>
     </list-item>
   </list>
   <p>LLM copyediting software processes chunks of text from an existing manuscript
@@ -79,7 +79,7 @@ by the questions posed to journal editors in this discussion document.</p>
   <p>The first type of disclosure aligns with
   <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/genetics/pages/general-instructions">the current requirements from GSA journals for authors</ext-link>,
   which include “full technical specifications of the LLM used (name, version, model, source) and method
-  of application (query structure, syntax)” [4].</p>
+  of application (query structure, syntax)”.</p>
   <p>CopyAid produces files that could be termed “method specification files”, following the
   language of the GSA requirement.
   Here is an example of such a file produced by CopyAid when an author chooses the “proofread”
@@ -100,17 +100,20 @@ by the questions posed to journal editors in this discussion document.</p>
   <p>An example of an individual commit (saved edit) is:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://github.com/greenelab/deep-review/commit/081fb466dd13c2813b3ae14bb916173f5d0442c5?diff=split">https://github.com/greenelab/deep-review/commit/081fb466dd13c2813b3ae14bb916173f5d0442c5?diff=split</ext-link></p>
   <p>This type of disclosure provides transparency on the history of text revisions that
-  an author chose to include in the manuscript.
+  an author chose to insert into manuscript drafts.
+  What an author chooses to insert into drafts
+  might be a mixture of what the author has typed with their own hands
+  mixed together with text they have copied from LLM-generated text.
   These revisions typically consist of large chunks of draft text early in
   the manuscript’s history, with later revisions being smaller.</p>
   <p>These histories can be easily and automatically archived in the Software Heritage
-  Archive, with archival timestamps beyond the authors’ control:</p>
+  Archive, with archival timestamps beyond the authors’ control, for example:</p>
   <p><ext-link ext-link-type="uri" xlink:href="https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://github.com/greenelab/deep-review">https://archive.softwareheritage.org/browse/origin/visits/?origin_url=https://github.com/greenelab/deep-review</ext-link></p>
 </sec>
 <sec id="third-type-of-disclosure">
   <title>Third Type of Disclosure</title>
-  <p>The third type of disclosure is similar to the second type but pertains to LLM-suggested edits rather than
-  changes saved by a human.
+  <p>The third type of disclosure is similar to the second type but pertains specifically to
+  LLM-suggested edits rather than changes saved by a human.
   This functionality is showcased by Manubot AI Editor.
   Example edits are illustrated in
   the following four diagrams from the paper about Manubot AI Editor:</p>
@@ -157,7 +160,7 @@ by the questions posed to journal editors in this discussion document.</p>
     actual LLM-suggested edits on past drafts.
     Alternatively, editors might be more interested in just getting a general sense of what kinds of
     edits an LLM generates for a given method specification file.</p>
-    <p>What would be more useful to journal editors, seeing</p>
+    <p>What would be more useful to journal editors? Seeing</p>
     <list list-type="bullet">
       <list-item>
         <p>the actual LLM-suggested edits on past drafts (which an author might or might not have
@@ -175,7 +178,7 @@ by the questions posed to journal editors in this discussion document.</p>
   <sec id="question-2">
     <title>Question 2</title>
     <p>If for question 1 you prefer LLM-suggested edits on actual past drafts,
-    what would be more useful:</p>
+    what would be more useful?</p>
     <list list-type="bullet">
       <list-item>
         <p>a short list (just edits on tens of selected paragraphs)</p>
